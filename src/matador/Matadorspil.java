@@ -1,4 +1,8 @@
 package matador;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Matadorspil
@@ -24,6 +28,22 @@ public class Matadorspil
 //		felter.add(new Gade("Rådhuspladsen",      20000,1100,2000));
             
             // indlæs spillebrættet fra fil
-            
+            try {
+			File file = new File("Plade.conf");
+			FileReader fileReader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			//StringBuffer stringBuffer = new StringBuffer();
+			String line;
+			while ((line = bufferedReader.readLine()) != null) {
+				felter.add(new "line");
+                                //stringBuffer.append(line);
+				//stringBuffer.append("\n");
+			}
+			fileReader.close();
+			System.out.println("Spilleplade indlæst!");
+			System.out.println(stringBuffer.toString());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
