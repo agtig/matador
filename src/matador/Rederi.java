@@ -25,7 +25,7 @@ public class Rederi extends Felt
 		{                                       // ingen ejer grunden, så køb den
 			if (sp.konto > pris)
 			{
-				if (sp.spørgsmål("købe "+priTekst+" for "+pris))
+				if (sp.spoergsmaal("købe "+priTekst+" for "+pris))
 				{
 					sp.transaktion( -pris );
 					ejer=sp;

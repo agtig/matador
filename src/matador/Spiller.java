@@ -20,9 +20,9 @@ public class Spiller
 	}
 
 	/** Et ja/nej-spørgsmål. Svarer brugeren ja returneres true, ellers false */
-	public boolean spørgsmål(String spørgsmål)
+	public boolean spoergsmaal(String spoergsmaal)
 	{
-		String spm = navn+": Vil du "+spørgsmål+"?";
+		String spm = navn+": Vil du "+spoergsmaal+"?";
 		String svar = javax.swing.JOptionPane.showInputDialog(spm, "ja");
 		System.out.println(spm+" "+svar);
 		if (svar!=null && svar.equals("ja")) return true;

@@ -1,9 +1,9 @@
 package matador;
 /** En gade, der kan købes af en spiller og bebygges */
-public class Løkken extends Felt
+public class Loekken extends Felt
 {
 	
-    public Løkken(String navn)
+    public Loekken(String navn)
     {
         this.priTekst = navn;
         this.sekTekst = "";

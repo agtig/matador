@@ -25,7 +25,7 @@ public class Gade extends Felt
 		{	                                        // eget felt
 			sp.besked("Det er din egen grund");
 			if (antalHuse<5 && sp.konto>huspris &&  // bemærk: kun hvis betingelserne
-			  sp.spørgsmål("købe hus for "+huspris))// er opfyldt stilles spørgsmålet
+sp.spoergsmaal("købe hus for "+huspris))// er opfyldt stilles spørgsmålet
 			{                                       // byg et hus
 				ejer.transaktion( -huspris );
 				antalHuse = antalHuse + 1;
@@ -35,7 +35,7 @@ public class Gade extends Felt
 		{	                                        // ingen ejer grunden, køb den?
 			if (sp.konto > pris)
 			{
-				if (sp.spørgsmål("købe "+priTekst+" for "+pris))
+				if (sp.spoergsmaal("købe "+priTekst+" for "+pris))
 				{
 					sp.transaktion( -pris );
 					ejer=sp;

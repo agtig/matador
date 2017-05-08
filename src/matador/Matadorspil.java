@@ -56,7 +56,7 @@ public class Matadorspil
                             break;
                         case "LØKKEN" :
                             // format: [1]Primær tekst
-                            felter.add(new Løkken(feltData[1]));
+                            felter.add(new Loekken(feltData[1]));
                             System.out.println("Felt nr: " + lineNo + " " + feltData[1] + " tilføjet til spillepladen.");
                             lineNo ++;
                             break;
@@ -74,7 +74,7 @@ public class Matadorspil
                             break;
                         case "FÆNGSEL" :
                             // format : [1]Primær tekst;[2]Sekundær tekst/Type
-                            felter.add(new Fængsel(feltData[1], feltData[2]));
+                            felter.add(new Faengsel(feltData[1], feltData[2]));
                             System.out.println("Felt nr: " + lineNo + " " + feltData[1] + " tilføjet til spillepladen.");
                             lineNo ++;
                             break;
