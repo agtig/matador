@@ -22,12 +22,12 @@ public class Gade2 extends Grund2
 	{
 		if (sp==ejer)
 		{                                        // eget felt; byg hus?
-			sp.besked("Du er landet på "+navn);
+			sp.besked("Du er landet på "+priTekst);
 			if (antalHuse<5 && sp.konto>huspris && sp.spørgsmål("købe hus for "+pris))
 			{                                     // byg et hus
 				ejer.transaktion( -huspris );
 				antalHuse = antalHuse + 1;
-				sp.besked("Du bygger hus på "+navn+" for "+huspris);
+				sp.besked("Du bygger hus på "+priTekst+" for "+huspris);
 			}
 		} else {
 			super.landet(sp);                      // brug gamle landet()

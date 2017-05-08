@@ -6,16 +6,17 @@ public class Rederi extends Felt
 	double pris;
 	double grundleje;
 
-	public Rederi(String navn, double pris, double leje)
+	public Rederi(String navn, String tekst, double pris, double leje)
 	{
-		this.navn = navn;
+		this.priTekst = navn;
+                this.sekTekst = tekst;
 		this.pris = pris;
 		this.grundleje = leje;
 	}
 
 	public void landet(Spiller sp)
 	{
-		sp.besked("Du er landet på "+navn);
+		sp.besked("Du er landet på "+priTekst);
 		if (sp==ejer)
 		{                                       // spiller ejer selv grunden
 			sp.besked("Det er din egen grund");
@@ -24,13 +25,13 @@ public class Rederi extends Felt
 		{                                       // ingen ejer grunden, så køb den
 			if (sp.konto > pris)
 			{
-				if (sp.spørgsmål("købe "+navn+" for "+pris))
+				if (sp.spørgsmål("købe "+priTekst+" for "+pris))
 				{
 					sp.transaktion( -pris );
 					ejer=sp;
 				}
 			}
-			else sp.besked("Du har ikke penge nok til at købe "+navn);
+			else sp.besked("Du har ikke penge nok til at købe "+priTekst);
 		}
 		else
 		{                                       // feltet ejes af anden spiller

@@ -4,9 +4,10 @@ public class Start extends Felt
 {
 	double gevinst;
 
-	public Start(double gevinst)
+	public Start(String tekst1, String tekst2, double gevinst)
 	{
-		navn = "Start";
+		priTekst = tekst1;
+                sekTekst = tekst2;
 		this.gevinst = gevinst;
 	}
 

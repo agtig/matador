@@ -1,0 +1,10 @@
+Her vises syntaksen for Plade.conf-filen
+*******************************************************
+START;Primær tekst;Sekundær tekst;Gevinst
+GADE;Primær tekst;Købspris;Afgift;Afgift v/1 hus;Afgift v/2 huse;Afgift v/3 huse;Afgift v/4 huse;Afgift v/hotel;Pris for huse
+LØKKEN;Primær tekst
+SKAT;Type;Primær tekst
+REDERI;Primær tekst;Sekundær tekst;Købspris;Afgift;Afgift v/2 rederier;Afgift v/3 rederier;Afgift v/4 rederier
+FÆNGSEL;Primær tekst;Sekundær tekst/Type
+BRYGGERI;Primær tekst;Købspris
+PARKERING;Primær tekst

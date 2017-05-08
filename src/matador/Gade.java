@@ -10,15 +10,16 @@ public class Gade extends Felt
 
 	public Gade(String navn, double pris, double leje, double huspris)
 	{
-		this.navn = navn;
-		this.pris = pris;
+		this.priTekst = navn;
+                this.sekTekst = (String.valueOf(pris) + " kr.");
+                this.pris = pris;
 		this.grundleje = leje;
 		this.huspris = huspris;
 	}
 
 	public void landet(Spiller sp)
 	{
-		sp.besked("Du er landet på "+navn);
+		sp.besked("Du er landet på "+priTekst);
 
 		if (sp==ejer)
 		{	                                        // eget felt
@@ -34,13 +35,13 @@ public class Gade extends Felt
 		{	                                        // ingen ejer grunden, køb den?
 			if (sp.konto > pris)
 			{
-				if (sp.spørgsmål("købe "+navn+" for "+pris))
+				if (sp.spørgsmål("købe "+priTekst+" for "+pris))
 				{
 					sp.transaktion( -pris );
 					ejer=sp;
 				}
 			}
-			else sp.besked("Du har ikke penge nok til at købe "+navn);
+			else sp.besked("Du har ikke penge nok til at købe "+priTekst);
 		}
 		else
 		{	                                        // felt ejes af anden spiller

@@ -13,8 +13,8 @@ public class BenytMatadorspil
 			// tag skiftevis Søren og Gitte (% er forklaret i afsnit Fejl: Henvisningskilde ikke fundet)
 			Spiller sp = spil.spillere.get(spil.spillersTur % spil.spillere.size());
                         do {
-                            int slag1 = (int)(Math.random()*2)+1;     // og slå et terningkast på den første terning (1-6)
-                            int slag2 = (int)(Math.random()*2)+1;     // og slå et terningkast på den anden terning (1-6)
+                            int slag1 = (int)(Math.random()*6)+1;     // og slå et terningkast på den første terning (1-6)
+                            int slag2 = (int)(Math.random()*6)+1;     // og slå et terningkast på den anden terning (1-6)
                             if (slag1 == slag2) {toEns = 1;System.out.println("Yay! To ens!");} // tjek om der er slået 2 ens
                             else {toEns = 0;}
                             int slag = slag1 + slag2;                 // lægger de to terningers værdier sammen
