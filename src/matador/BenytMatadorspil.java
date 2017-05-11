@@ -30,17 +30,17 @@ public class BenytMatadorspil
                 int slag2 = (int)(Math.random()*6)+1;     // og slå et terningkast på den anden terning (1-6)
                 if (slag1 == slag2) {toEns = 1;System.out.println("Yay! To ens!");} // tjek om der er slået 2 ens
                 else {toEns = 0;}
-                int slag = slag1 + slag2;                 // lægger de to terningers værdier sammen
+                sp.slag = slag1 + slag2;                 // lægger de to terningers værdier sammen
                 System.out.println("***** "+sp.navn+" på felt "+sp.feltnr+" slår "+slag1+" og "+slag2);
 
-                for (int i=1; i<=slag; i=i+1)                  // nu rykkes der
+                for (int i=1; i<=sp.slag; i=i+1)                  // nu rykkes der
                 {
                     // gå til næste felt. Hvis vi når over antal felter så tæl fra 0
                     sp.feltnr = sp.feltnr + 1;
                     if (sp.feltnr == spil.felter.size()) sp.feltnr=0;
                     Felt felt = spil.felter.get(sp.feltnr);
 
-                    if (i<slag) felt.passeret(sp); // kald passeret() på passerede felter
+                    if (i<sp.slag) felt.passeret(sp); // kald passeret() på passerede felter
                     else felt.landet(sp);          // kald landet() på sidste felt
                     try { Thread.sleep(300); } catch (Exception e) {} // vent 0.3 sek
                 }

@@ -35,8 +35,10 @@ public class Rederi extends Felt
 		}
 		else
 		{                                       // feltet ejes af anden spiller
-			sp.besked("Leje: "+grundleje);
-			sp.betal(ejer, grundleje);            // spiller betaler til ejeren
+                    // grundleje beregnes
+                    //if 
+                    sp.besked("Leje: "+grundleje);
+                    sp.betal(ejer, grundleje);      // spiller betaler til ejeren
 		}
 	}
 }

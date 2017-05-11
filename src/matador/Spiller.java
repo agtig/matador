@@ -5,7 +5,8 @@ public class Spiller
 	String navn;       // spillerens navn, f.eks. "Søren"
 	double konto;      // antal kroner på spillerens konto
 	int feltnr;        // hvad nummer felt spilleren står på. rdquoStartrdquo er nummer 0
-
+        int slag;           // slaget som spilleren slog sidst.
+        
 	public Spiller(String navn, double konto)
 	{
 		this.navn = navn;
