@@ -73,8 +73,8 @@ public class Matadorspil
                             lineNo ++;
                             break;
                         case "FÆNGSEL" :
-                            // format : [1]Primær tekst;[2]Sekundær tekst/Type
-                            felter.add(new Faengsel(feltData[1], feltData[2]));
+                            // format : [1]Primær tekst;[2]Sekundær tekst;[3]Type
+                            felter.add(new Faengsel(feltData[1], feltData[2], feltData[3]));
                             System.out.println("Felt nr: " + lineNo + " " + feltData[1] + " tilføjet til spillepladen.");
                             lineNo ++;
                             break;

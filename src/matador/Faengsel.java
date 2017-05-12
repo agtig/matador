@@ -4,19 +4,21 @@ public class Faengsel extends Felt
 {
     String type;
     
-    public Faengsel(String navn, String tekst)
+    public Faengsel(String navn, String tekst, String type)
     {
         this.priTekst = navn;
-        this.sekTekst = "";
-        this.type = tekst;
+        this.sekTekst = tekst;
+        this.type = type;
     }
 
+    @Override
     public void landet(Spiller sp)
     {
         sp.besked("Du er landet på "+priTekst);
         // først tjekkes om der er landet på "De fængsles" eller bare "Besøg"
-        if (type.matches("fælde")) {
-            
+        if (this.type.matches("fanget")) {
+            sp.iFængsel = 1;
+            sp.feltnr = 10;
         }
         else {
             

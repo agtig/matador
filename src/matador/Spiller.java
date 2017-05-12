@@ -2,16 +2,19 @@ package matador;
 /** Definition af en spiller */
 public class Spiller
 {
-	String navn;       // spillerens navn, f.eks. "Søren"
-	double konto;      // antal kroner på spillerens konto
-	int feltnr;        // hvad nummer felt spilleren står på. rdquoStartrdquo er nummer 0
+	String navn;        // spillerens navn, f.eks. "Søren"
+	double konto;       // antal kroner på spillerens konto
+	int feltnr;         // hvad nummer felt spilleren står på. rdquoStartrdquo er nummer 0
         int slag;           // slaget som spilleren slog sidst.
+        int iFængsel;       // er spilleren i fængsel? (1=ja, 0=nej)
         
 	public Spiller(String navn, double konto)
 	{
-		this.navn = navn;
-		this.konto = konto;
-		feltnr = 0;
+		this.navn = navn;   // spillerens navn sættes
+		this.konto = konto; // spilleren modtager et startbeløb på sin konto
+		feltnr = 0;         // spilleren starter på start-feltet
+                iFængsel = 0;       // spilleren starter med ikke at være i fængsel
+                        
 	}
 
 	/** En besked til spilleren */

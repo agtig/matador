@@ -36,7 +36,7 @@ public class MatadorPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(0, 204, 51));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ms\\DTU\\java\\Matador\\Matador_spilleplade.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ms\\OneDrive\\DTU\\java\\Matador\\Matador_spilleplade.jpg")); // NOI18N
 
         jTextArea1.setBackground(new java.awt.Color(153, 204, 0));
         jTextArea1.setColumns(20);
