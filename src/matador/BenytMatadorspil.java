@@ -46,9 +46,9 @@ public class BenytMatadorspil {
                     else toEns = 0;
                     sp.slag = slag[0] + slag[1];// lægger de to terningers værdier sammen
                     System.out.println("***** "+sp.navn+" på felt "+
-                            sp.feltnr+" slår "+slag[0]+" og "+slag[1]);
+                            (sp.feltnr+1)+" slår "+slag[0]+" og "+slag[1]);
                     vindue.printTilSkaerm("***** "+sp.navn+" på felt "+
-                            sp.feltnr+" slår "+slag[0]+" og "+slag[1]);
+                            (sp.feltnr+1)+" slår "+slag[0]+" og "+slag[1]);
 
                     for (int i=1; i<=sp.slag; i=i+1) {       // nu rykkes der
                         // gå til næste felt. Hvis vi når over antal felter så tæl fra 0
