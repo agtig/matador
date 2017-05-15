@@ -35,7 +35,7 @@ public class BenytMatadorspil {
         for (spil.spillersTur=0; spil.spillersTur<40; spil.spillersTur++) {
             // tag skiftevis spillerne
             Spiller sp = spil.spillere.get(spil.spillersTur % spil.spillere.size());
-            if (sp.iFængsel == 0) {
+            if (sp.iFaengsel == 0) {
                 do {
                     slag = Terning.slaa();      // slå med terningen
                     if (slag[0] == slag[1]) {   // tjek om der er slået 2 ens
@@ -69,9 +69,9 @@ public class BenytMatadorspil {
                 } while (toEns != 0); // slut do loop - gentages hvis der var slået 2 ens.
             } // slut if - ikke i fængsel
             else {
-                System.out.println("***** "+sp.navn+" er i fængsel! Antal runder i Fængsel: " + sp.iFængsel);
-                vindue.printTilSkaerm("***** "+sp.navn+" er i fængsel! Antal runder i Fængsel: " + sp.iFængsel);
-                    switch(sp.iFængsel) {
+                System.out.println("***** "+sp.navn+" er i fængsel! Antal runder i Fængsel: " + sp.iFaengsel);
+                vindue.printTilSkaerm("***** "+sp.navn+" er i fængsel! Antal runder i Fængsel: " + sp.iFaengsel);
+                    switch(sp.iFaengsel) {
                         case '1' :
                         case '2' :
                             if (sp.spoergsmaal("Vil du betale kautionen på 1000 kr. for at slippe ud af fængslet?")) {
@@ -91,11 +91,11 @@ public class BenytMatadorspil {
                                 } while (forsoeg <=3 && toEns !=1);
                                 // ryk frem på spillepladen med det slåede antal øjne
                                 if (toEns == 1) {
-                                    sp.iFængsel = 0;
+                                    sp.iFaengsel = 0;
                                     // her rykkes der
                                 } // slut if - hvis man kom ud af fængslet
                             } // slut else - hvis man valgte at slå med terningerne
-                            sp.iFængsel ++;
+                            sp.iFaengsel ++;
                             break;
                         case '3' :
                             int forsoeg = 0;
@@ -113,7 +113,7 @@ public class BenytMatadorspil {
                                 if (toEns != 1) {
                                     sp.spoergsmaal("Du skal betale kautionen på 1000 kr. for at slippe ud af fængslet!");
                                     sp.transaktion(-1000);
-                                    sp.iFængsel = 0;
+                                    sp.iFaengsel = 0;
                                     // her rykkes der
                                 } // slut if - hvis man kom ud af fængslet
                             break;

@@ -19,13 +19,13 @@ public class BryggeriTest {
     
     public BryggeriTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
 //        Matadorspil spil = new Matadorspil();
-//        spil.spillere.add(new Spiller("Robert", 50000));                
+//        spil.spillere.add(new Spiller("Robert", 50000));  
     }
-    
+      
     @AfterClass
     public static void tearDownClass() {
     }

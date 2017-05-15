@@ -14,7 +14,7 @@ public class Faengsel extends Felt {
         sp.besked("Du er landet på "+priTekst);
         // først tjekkes om der er landet på "De fængsles" eller bare "Besøg"
         if (this.type.matches("fanget")) {
-            sp.iFængsel = 1;
+            sp.iFaengsel = 1;
             sp.feltnr = 10;
         }
         else {
